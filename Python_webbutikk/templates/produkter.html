@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Produkter – IronCore</title>
+    <link rel="stylesheet" href="/static/css/Style.css">
+    <link rel="stylesheet" href="/Python_webbutikk/static/cart.js">
+</head>
+<body>
+
+<header>
+        <nav class="navbar">
+            <div class="logo">IRONCORE</div>
+            <ul class="nav-links">
+                <li><a href="/">Hjem</a></li>
+                <li><a href="#">Produkter</a></li>
+                <li><a href="Om_oss.html">Om oss</a></li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+            </ul>
+            <a href="checkout.html"><button class="cart-btn">🛒</button></a>
+
+        </nav>
+
+       </header>
+
+
+
+    <h1>Produkter</h1>
+    <div class="product-grid">
+        {% for produkt in produkter %}
+        <div class="product">
+            <img src="{{ produkt.img }}" alt="{{ produkt.navn }}" width="150">
+            <h3>{{ produkt.navn }}</h3>
+            <span class="price">kr {{ produkt.pris }}</span>
+            <form method="POST">
+                <input type="hidden" name="produkt_navn" value="{{ produkt.navn }}">
+                <input type="hidden" name="pris" value="{{ produkt.pris }}">
+                <input type="hidden" name="img" value="{{ produkt.img }}">
+                <label>Antall:</label>
+                <input type="number" name="antall" value="1" min="1">
+                <button type="submit">Legg i handlekurv</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+
+    <h2>Handlekurv</h2>
+    <ul>
+        {% for item in handlekurv %}
+            <li>{{ item.antall }} x {{ item.produkt }} (kr {{ item.pris }})</li>
+        {% endfor %}
+    </ul>
+
+    {% if handlekurv %}
+    <form method="POST" action="/bestill">
+        <label>Navn:</label>
+        <input type="text" name="navn" required>
+        <button type="submit">Fullfør bestilling</button>
+    </form>
+    {% endif %}
+</body>
+</html>

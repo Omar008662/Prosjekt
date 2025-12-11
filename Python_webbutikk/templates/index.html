@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronCore Styrketrening Utstyr</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/Style.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">IRONCORE</div>
+            <ul class="nav-links">
+                <li><a href="#">Hjem</a></li>
+                <li><a href="produkter">Produkter</a></li>
+                <li><a href="Om_oss.html">Om oss</a></li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+            </ul>
+            <a href="checkout.html"><button class="cart-btn">🛒</button></a>
+
+        </nav>
+
+        <section class="hero">
+            <h1>Bygg styrke. Bli sterkere hver dag.</h1>
+            <p>Premium utstyr for deg som tar trening på alvor.</p>
+            <a href="produkter.html" class="btn">Se produkter</a>
+        </section>
+    </header>
+
+    <main>
+        <section class="products">
+            <h2>Populære produkter</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="/static/bilder/Svartflaske2.png" alt="Trenings Flaske">
+                    <h3>Trenings Flaske</h3>
+                    <p>kr 349</p>
+                    <button class="buy-btn">Legg i handlekurv</button>
+                </div>
+
+                <div class="product">
+                    <img src="/static/bilder/Compression shirt.webp" alt="Compression shirt">
+                    <h3>Compression shirt</h3>
+                    <p>kr 499</p>
+                    <button class="buy-btn">Legg i handlekurv</button>
+                </div>
+
+                <div class="product">
+                    <img src="/static/bilder/Lifting straps.png" alt="Lifting straps">
+                    <h3>Lifting straps</h3>
+                    <p>kr 299</p>
+                    <button class="buy-btn">Legg i handlekurv</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 IronCore. Alle rettigheter reservert.</p>
+    </footer>
+</body>    
+</html>

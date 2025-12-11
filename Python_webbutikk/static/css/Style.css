@@ -1,0 +1,463 @@
+/* Grunnstil */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+}
+
+/* Navigasjon */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #e50914; /* rød detalj */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e50914;
+}
+
+.cart-btn {
+    background: none;
+    border: 2px solid #e50914;
+    color: #e50914;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.cart-btn:hover {
+    background-color: #e50914;
+    color: #fff;
+}
+
+/* Hero-seksjon */
+.hero {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: url('https://images.unsplash.com/photo-1579758629934-0953d0cfdab9') center/cover no-repeat;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #e50914;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #b00710;
+}
+
+/* Produkter */
+.products {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #181818;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;   /* Midtstiller alle produktene */
+    gap: 2rem;                 /* Mellomrom mellom produktene */
+}
+
+
+.product {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;             /* Gjør bildet like bredt som boksen */
+    height: 250px;           /* Samme høyde på alle */
+    object-fit: cover;       /* Beskjærer pent uten å strekke */
+    border-radius: 10px;      /* (valgfritt) avrundede hjørner */
+}
+
+
+.buy-btn {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #b00710;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #000;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.products-page {
+    padding: 4rem 2rem;
+    background-color: #181818;
+    text-align: center;
+}
+
+.products-page h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.products-page .sub-text {
+    color: #bbb;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+}
+
+.product .price {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+
+.about-section {
+    padding: 4rem 2rem;
+    background-color: #181818;
+    color: #fff;
+    text-align: center;
+}
+
+.about-section h1 {
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-section .sub-text {
+    color: #bbb;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    max-width: 550px;
+    text-align: left;
+}
+
+.about-text h2 {
+    color: #e50914;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+}
+
+.about-text p {
+    line-height: 1.6;
+    color: #ddd;
+    margin-top: 0.5rem;
+}
+
+.contact-section {
+    padding: 4rem 2rem;
+    background-color: #181818;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-section .sub-text {
+    color: #bbb;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+/* Kontaktinfo */
+.contact-info {
+    max-width: 400px;
+    background-color: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.contact-info h2, .contact-info h3 {
+    color: #e50914;
+}
+
+/* Skjema */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    width: 100%;
+}
+
+.contact-form label {
+    margin-top: 1rem;
+    text-align: left;
+    font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem;
+    background: #111;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+    margin-top: 0.3rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #e50914;
+}
+
+.send-btn {
+    background-color: #e50914;
+    color: #fff;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background-color: #b00710;
+}
+
+
+.checkout-section {
+    padding: 4rem 2rem;
+    background-color: #181818;
+    color: #fff;
+    text-align: center;
+}
+
+.checkout-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Handlekurv-elementer */
+.cart-items {
+    background: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 450px;
+    width: 100%;
+    text-align: left;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.item-info h3 {
+    margin: 0;
+}
+
+.item-info p {
+    color: #e50914;
+}
+
+/* Oppsummering */
+.checkout-summary {
+    background: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 350px;
+    width: 100%;
+    text-align: left;
+}
+
+.checkout-summary p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+}
+
+.checkout-summary .total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.pay-btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #e50914;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.pay-btn:hover {
+    background: #b00710;
+}
+
+/* Kundeskjema */
+.checkout-form {
+    margin-top: 3rem;
+    background: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.checkout-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-form label {
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.checkout-form input {
+    padding: 0.8rem;
+    background: #111;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 0.3rem;
+}
+
+.send-btn {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #e50914;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.send-btn:hover {
+    background: #b00710;
+}
+
+.remove-btn {
+    background: #e50914;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background: #b00710;
+}
+
+
+.cart-btn {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+}
